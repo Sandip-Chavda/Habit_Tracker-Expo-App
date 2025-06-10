@@ -54,9 +54,8 @@ const AddHabbitScreen = () => {
       if (error instanceof Error) {
         setError(error.message);
         return;
-      } else {
-        setError("There was an error creating habit");
       }
+      setError("There was an error creating habit");
     }
   };
 

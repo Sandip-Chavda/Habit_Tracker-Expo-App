@@ -14,10 +14,6 @@ const AuthScreen = () => {
   const router = useRouter();
   const { signIn, signUp } = useAuth();
 
-  const handleSwitchMode = () => {
-    setIsSignUp((prev) => !prev);
-  };
-
   const handleAuth = async () => {
     if (!email || !password) {
       setError("All fields required.");
@@ -25,7 +21,7 @@ const AuthScreen = () => {
     }
 
     if (password.length <= 8) {
-      setError("Password must 8 characters long & must not be simple.");
+      setError("Password must be 9 characters long & must not be simple.");
       return;
     }
 
@@ -47,6 +43,9 @@ const AuthScreen = () => {
     }
   };
 
+  const handleSwitchMode = () => {
+    setIsSignUp((prev) => !prev);
+  };
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}

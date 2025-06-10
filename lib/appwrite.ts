@@ -11,6 +11,8 @@ export const databases = new Databases(client);
 export const DATABASE_ID = process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID!;
 export const HABBITS_COLLECTION_ID =
   process.env.EXPO_PUBLIC_HABBITS_COLLECTION_ID!;
+export const COMPLETIONS_COLLECTION_ID =
+  process.env.EXPO_PUBLIC_HABBITS_COMPLETION_COLLECTION_ID!;
 
 export interface RealtimeResponse {
   events: string[];

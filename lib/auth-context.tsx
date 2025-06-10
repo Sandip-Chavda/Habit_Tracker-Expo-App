@@ -4,10 +4,10 @@ import { account } from "./appwrite";
 
 type AuthContextType = {
   user: Models.User<Models.Preferences> | null;
+  isLoadingUser: boolean;
   signUp: (email: string, password: string) => Promise<string | null>;
   signIn: (email: string, password: string) => Promise<string | null>;
   signOut: () => Promise<void>;
-  isLoadingUser: boolean;
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -74,9 +74,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     <AuthContext.Provider
       value={{
         user,
+        isLoadingUser,
         signUp,
         signIn,
-        isLoadingUser,
         signOut,
       }}
     >

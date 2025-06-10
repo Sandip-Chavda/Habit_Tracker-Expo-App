@@ -2,6 +2,7 @@ import { AuthProvider, useAuth } from "@/lib/auth-context";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect } from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const RouteGuard = ({ children }: { children: React.ReactNode }) => {
@@ -13,7 +14,7 @@ const RouteGuard = ({ children }: { children: React.ReactNode }) => {
     const inAuthGroup = segments[0] === "auth";
 
     if (!user && !inAuthGroup && !isLoadingUser) {
-      return router.replace("/auth");
+      router.replace("/auth");
     } else if (user && inAuthGroup && !isLoadingUser) {
       router.replace("/");
     }
@@ -24,17 +25,19 @@ const RouteGuard = ({ children }: { children: React.ReactNode }) => {
 
 export default function RootLayout() {
   return (
-    <AuthProvider>
-      {/* <PaperProvider> */}
-      <SafeAreaProvider>
-        <RouteGuard>
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          </Stack>
-          <StatusBar style="dark" animated />
-        </RouteGuard>
-      </SafeAreaProvider>
-      {/* </PaperProvider> */}
-    </AuthProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <AuthProvider>
+        {/* <PaperProvider> */}
+        <SafeAreaProvider>
+          <RouteGuard>
+            <Stack>
+              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            </Stack>
+            <StatusBar style="dark" animated />
+          </RouteGuard>
+        </SafeAreaProvider>
+        {/* </PaperProvider> */}
+      </AuthProvider>
+    </GestureHandlerRootView>
   );
 }
