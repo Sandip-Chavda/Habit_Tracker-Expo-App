@@ -19,6 +19,8 @@ const StreaksScreen = () => {
   const { user } = useAuth();
 
   useEffect(() => {
+    if (!user) return;
+
     if (user) {
       const habitsChannel = `databases.${DATABASE_ID}.collections.${HABBITS_COLLECTION_ID}.documnets`;
 
@@ -72,6 +74,8 @@ const StreaksScreen = () => {
   }, [user, habits]);
 
   const fetchHabits = async () => {
+    if (!user) return;
+
     try {
       const response = await databases.listDocuments(
         DATABASE_ID,

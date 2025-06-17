@@ -23,6 +23,8 @@ export default function Index() {
   const swipeableRefs = useRef<{ [key: string]: Swipeable | null }>({});
 
   useEffect(() => {
+    if (!user) return;
+
     if (user) {
       const habitsChannel = `databases.${DATABASE_ID}.collections.${HABBITS_COLLECTION_ID}.documnets`;
       const habitsSubcription = client.subscribe(
@@ -75,6 +77,8 @@ export default function Index() {
   }, [user, habits]);
 
   const fetchHabits = async () => {
+    if (!user) return;
+
     try {
       const response = await databases.listDocuments(
         DATABASE_ID,
