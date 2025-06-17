@@ -5,6 +5,8 @@ Helps you track and visualize your daily habits, stay motivated, and celebrate s
 
 ## 📹 Demo
 
+https://github.com/user-attachments/assets/411fe627-eb00-4302-adad-3801d0b59457
+
 ## 🌟 Features
 
 ✅ **Add, Complete, and Remove Habits** — Easily manage your habits  
