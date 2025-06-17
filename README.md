@@ -1,50 +1,71 @@
-# Welcome to your Expo app 👋
+# 🎯 Habit Tracker - Expo App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple and beautiful **Habit Tracker** made with **React Native (Expo)**.  
+Helps you track and visualize your daily habits, stay motivated, and celebrate small wins! 🌟
 
-## Get started
+## 📹 Demo
 
-1. Install dependencies
+## 🌟 Features
 
-   ```bash
-   npm install
-   ```
+✅ **Add, Complete, and Remove Habits** — Easily manage your habits  
+✅ **Daily Check-Ins** — Keep track of your progress day by day  
+✅ **Streaks** — Visualize your habits streaks and make best streak.  
+✅ **Clean and Modern UI** — Designed with simplicity and ease of use in mind  
+✅ **Completely Built with Expo** — Fast, lightweight, and cross-platform (iOS and Android)
 
-2. Start the app
+## 📱 Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+- **Language:** TypeScript, [React Native](https://reactnative.dev/) with [Expo](https://expo.dev/),
+- **Database:** Appwrite Databses, PostgreSQL
+- **Authentication:** Appwrite Authentication
+- **Animation Libraries:** React Native Reanimated, React Native Paper
 
-In the output, you'll find options to open the app in a
+## 🚀 Installation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+1️⃣ **Clone the repository:**
 
 ```bash
-npm run reset-project
+git clone https://github.com/Sandip-Chavda/Habit_Tracker-Expo-App.git
+cd Habit_Tracker-Expo-App
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2️⃣ **Install dependencies:**
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+or
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+yarn install
+```
 
-## Join the community
+3️⃣ **Start the Expo project:**
 
-Join our community of developers creating universal apps.
+```bash
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4️⃣ **Open in Expo Go:**
+
+- Download **Expo Go** from your phone’s App Store or Play Store.
+- Scan QR code from terminal or Expo Dev Tools.
+
+## 🌟 Why?
+
+- To **track habits daily**, visualize progress, and stay motivated.
+- Built this with **Expo** to learn **React Native fundamentals** and UI design.
+
+## 🤝 Contribution
+
+Contributions, issues, and pull requests are warmly welcomed!  
+Please follow the [contributing guidelines] if you’d like to contribute.
+
+## 📝 License
+
+MIT — See [LICENSE](LICENSE) for more details.
+
+---
+
+🚀 Happy habit tracking! 🌟
